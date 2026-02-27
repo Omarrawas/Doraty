@@ -35,7 +35,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   // Explicitly cast translations to avoid indexing error
-  const t = (translations as Record<string, TranslationType>)[locale];
+  const t = (translations as Record<Locale, TranslationType>)[locale];
 
   return (
     <LanguageContext.Provider value={{ locale, t, dir, toggleLanguage, setLanguage }}>
@@ -44,11 +44,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useLanguage() {
+export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useLanguage must be used within a LanguageProvider");
   }
-  return context;
+  return context as LanguageContextType;
 }
 
