@@ -71,8 +71,6 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up">
           <a
             href="https://doraty-app.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-primary text-base px-8 py-4 glow-blue w-full sm:w-auto justify-center"
             id="hero-signin-btn"
           >
@@ -81,8 +79,6 @@ export default function HeroSection() {
           </a>
           <a
             href="https://doraty-app.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-secondary text-base px-8 py-4 w-full sm:w-auto justify-center"
             id="hero-webapp-btn"
           >
@@ -138,8 +134,6 @@ export default function HeroSection() {
           {/* Web */}
           <a
             href="https://doraty-app.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
             id="hero-web-btn"
             className="group flex items-center gap-3 px-5 py-3 rounded-xl glass border border-white/10 hover:border-purple-500/40 hover:bg-purple-500/5 transition-all duration-300 hover:scale-105 active:scale-95"
           >

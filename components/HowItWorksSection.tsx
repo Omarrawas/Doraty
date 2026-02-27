@@ -86,8 +86,6 @@ export default function HowItWorksSection() {
         <div className="text-center mt-14">
           <a
             href="https://doraty-app.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-primary text-base px-10 py-4 glow-blue inline-flex"
           >
             {t.common.getStarted}

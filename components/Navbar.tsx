@@ -67,16 +67,12 @@ export default function Navbar() {
 
             <a
               href="https://doraty-app.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
               className="btn-secondary text-sm py-2 px-4 whitespace-nowrap"
             >
               {t.common.openWebApp}
             </a>
             <a
               href="https://doraty-app.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
               className="btn-primary text-sm py-2 px-5 whitespace-nowrap"
             >
               {t.common.signIn}
@@ -123,16 +119,12 @@ export default function Navbar() {
               <div className="flex flex-col gap-2 mt-4 pt-4 border-t border-white/10">
                 <a
                   href="https://doraty-app.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="btn-secondary text-sm text-center"
                 >
                   {t.common.openWebApp}
                 </a>
                 <a
                   href="https://doraty-app.vercel.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="btn-primary text-sm text-center justify-center"
                 >
                   {t.common.signIn}

@@ -111,8 +111,6 @@ export default function PlatformSection() {
                   {isWeb ? (
                     <a
                       href="https://doraty-app.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="btn-primary w-full justify-center text-sm py-3"
                     >
                       {card.cta}
