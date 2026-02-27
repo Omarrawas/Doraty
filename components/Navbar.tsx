@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { BookOpen, Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
@@ -35,8 +36,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg group-hover:shadow-blue-500/40 transition-shadow duration-300">
-              <BookOpen className="w-5 h-5 text-white" />
+            <div className="relative w-9 h-9 overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Doraty Logo"
+                fill
+                className="object-contain"
+              />
             </div>
             <span className="text-xl font-bold gradient-text-blue">{t.hero.title}</span>
           </Link>

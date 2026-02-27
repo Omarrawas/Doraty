@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Github, Twitter, Youtube, Mail } from "lucide-react";
+import { Github, Twitter, Youtube, Mail } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
@@ -14,8 +15,13 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
-                <BookOpen className="w-4 h-4 text-white" />
+              <div className="relative w-8 h-8 overflow-hidden group-hover:scale-110 transition-transform">
+                <Image
+                  src="/logo.png"
+                  alt="Doraty Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="text-lg font-bold gradient-text-blue">{t.hero.title}</span>
             </Link>
