@@ -91,7 +91,7 @@ export default function PrivacyPolicy() {
         {/* Intro */}
         <div className="glass p-8 rounded-2xl border-white/10 mb-12">
           <p className="text-lg text-slate-300 leading-relaxed italic">
-            "{activeContent.introduction}"
+            &quot;{activeContent.introduction}&quot;
           </p>
         </div>
 
