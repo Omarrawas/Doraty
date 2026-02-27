@@ -27,15 +27,18 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [locale]);
 
   const toggleLanguage = () => {
-    setLocale((prev) => (prev === "ar" ? "en" : "ar"));
+    setLocale((prev: Locale) => (prev === "ar" ? "en" : "ar"));
   };
 
   const setLanguage = (lang: Locale) => {
     setLocale(lang);
   };
 
+  // Explicitly cast translations to avoid indexing error
+  const t = (translations as Record<string, TranslationType>)[locale];
+
   return (
-    <LanguageContext.Provider value={{ locale, t: translations[locale], dir, toggleLanguage, setLanguage }}>
+    <LanguageContext.Provider value={{ locale, t, dir, toggleLanguage, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -48,3 +51,4 @@ export function useLanguage() {
   }
   return context;
 }
+
