@@ -110,7 +110,7 @@ export default function PlatformSection() {
 
                   {isWeb ? (
                     <a
-                      href="https://app.doraty.vercel.app"
+                      href="https://doraty-app.vercel.app"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary w-full justify-center text-sm py-3"

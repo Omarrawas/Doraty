@@ -70,7 +70,7 @@ export default function HeroSection() {
         {/* Primary CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up">
           <a
-            href="https://app.doraty.vercel.app"
+            href="https://doraty-app.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-base px-8 py-4 glow-blue w-full sm:w-auto justify-center"
@@ -80,7 +80,7 @@ export default function HeroSection() {
             <ExternalLink className="w-4 h-4 rtl:rotate-180" />
           </a>
           <a
-            href="https://app.doraty.vercel.app"
+            href="https://doraty-app.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary text-base px-8 py-4 w-full sm:w-auto justify-center"
@@ -137,7 +137,7 @@ export default function HeroSection() {
 
           {/* Web */}
           <a
-            href="https://app.doraty.vercel.app"
+            href="https://doraty-app.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             id="hero-web-btn"

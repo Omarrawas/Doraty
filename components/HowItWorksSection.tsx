@@ -85,7 +85,7 @@ export default function HowItWorksSection() {
         {/* CTA */}
         <div className="text-center mt-14">
           <a
-            href="https://app.doraty.vercel.app"
+            href="https://doraty-app.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary text-base px-10 py-4 glow-blue inline-flex"
