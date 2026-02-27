@@ -117,13 +117,35 @@ export default function PlatformSection() {
                       <ExternalLink className="w-4 h-4 rtl:rotate-180" />
                     </a>
                   ) : index === 1 ? (
-                    <a
-                      href="https://github.com/Omarrawas/doraty-app/releases/latest/download/app-release.apk"
-                      className="btn-primary w-full justify-center text-sm py-3"
-                    >
-                      <Download className="w-4 h-4" />
-                      {card.cta}
-                    </a>
+                      <div className="flex flex-col gap-3">
+                        <a
+                          href="https://github.com/Omarrawas/doraty-app/releases/latest/download/app-release.apk"
+                          className="btn-primary w-full justify-center text-sm py-3"
+                        >
+                          <Download className="w-4 h-4" />
+                          {card.cta}
+                        </a>
+                        <div className="grid grid-cols-1 gap-2 mt-1">
+                          <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold mb-1 px-1">
+                            {locale === "ar" ? "إصدارات مخصصة للمعمارية:" : "Architecture specific builds:"}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              { label: "ARM64-v8a", file: "app-arm64-v8a-release.apk" },
+                              { label: "ARM-v7a", file: "app-armeabi-v7a-release.apk" },
+                              { label: "x86_64", file: "app-x86_64-release.apk" },
+                            ].map((arch) => (
+                              <a
+                                key={arch.file}
+                                href={`https://github.com/Omarrawas/doraty-app/releases/latest/download/${arch.file}`}
+                                className="text-[10px] bg-white/5 hover:bg-blue-500/10 border border-white/10 hover:border-blue-500/30 text-slate-400 hover:text-blue-400 px-2 py-1.5 rounded-md transition-all flex-1 text-center font-medium"
+                              >
+                                {arch.label}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                   ) : (
                         <a
                           href="https://github.com/Omarrawas/doraty-app/releases/latest/download/Doraty-Windows.zip"
