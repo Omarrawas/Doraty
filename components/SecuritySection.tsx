@@ -28,7 +28,7 @@ export default function SecuritySection() {
             </p>
 
             <div className="grid grid-cols-2 gap-4">
-              {t.security.labels.map((label) => (
+              {t.security.labels.map((label: string) => (
                 <div
                   key={label}
                   className="flex items-center gap-2 px-4 py-3 rounded-xl glass border border-white/5"
@@ -47,7 +47,7 @@ export default function SecuritySection() {
             {/* Background Glow */}
             <div className="absolute inset-0 bg-blue-500/5 blur-[100px] -z-10" />
 
-            {t.security.items.map((item, index) => {
+            {t.security.items.map((item: any, index: number) => {
               const Icon = icons[index];
               return (
                 <div

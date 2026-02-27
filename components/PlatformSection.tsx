@@ -49,7 +49,7 @@ export default function PlatformSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {t.platforms.cards.map((card, index) => {
+          {t.platforms.cards.map((card: any, index: number) => {
             const Icon = icons[index];
             const isWeb = index === 0;
             return (
@@ -97,7 +97,7 @@ export default function PlatformSection() {
                   </p>
 
                   <ul className="space-y-2 mb-8 lowercase">
-                    {card.features.map((feature) => (
+                    {card.features.map((feature: string) => (
                       <li
                         key={feature}
                         className="flex items-center gap-2 text-sm text-slate-400"

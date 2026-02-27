@@ -49,7 +49,7 @@ export default function HowItWorksSection() {
           {/* Connector Line (desktop) */}
           <div className={`hidden lg:block absolute top-16 ${dir === 'rtl' ? 'right-[calc(12.5%+24px)] left-[calc(12.5%+24px)]' : 'left-[calc(12.5%+24px)] right-[calc(12.5%+24px)]'} h-px bg-gradient-to-r from-blue-500/20 via-violet-500/30 to-amber-500/20 z-0`} />
 
-          {t.howItWorks.steps.map((step, index) => {
+          {t.howItWorks.steps.map((step: any, index: number) => {
             const Icon = icons[index];
             return (
               <div key={index} className="relative z-10 group">

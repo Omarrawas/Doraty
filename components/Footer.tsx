@@ -23,7 +23,7 @@ export default function Footer() {
               {t.footer.description}
             </p>
             <div className="flex items-center gap-4">
-              {[Twitter, Github, Youtube].map((Icon, i) => (
+              {[Twitter, Github, Youtube].map((Icon: any, i: number) => (
                 <a
                   key={i}
                   href="#"
@@ -41,7 +41,7 @@ export default function Footer() {
               {t.footer.product}
             </h4>
             <ul className="space-y-4">
-              {[t.nav.features, t.nav.howItWorks, t.nav.platforms, t.nav.security].map((link) => (
+              {[t.nav.features, t.nav.howItWorks, t.nav.platforms, t.nav.security].map((link: string) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}

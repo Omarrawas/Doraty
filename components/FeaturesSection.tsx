@@ -73,7 +73,7 @@ export default function FeaturesSection() {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.features.list.map((feature, index) => {
+          {t.features.list.map((feature: any, index: number) => {
             const Icon = icons[index];
             return (
               <div
