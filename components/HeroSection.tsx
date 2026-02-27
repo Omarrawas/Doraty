@@ -95,7 +95,7 @@ export default function HeroSection() {
 
           {/* Windows */}
           <a
-            href="#platforms"
+            href="https://github.com/Omarrawas/doraty-app/releases/latest/download/Doraty-Windows.zip"
             id="hero-windows-btn"
             className="group flex items-center gap-3 px-5 py-3 rounded-xl glass border border-white/10 hover:border-blue-500/40 hover:bg-blue-500/5 transition-all duration-300 hover:scale-105 active:scale-95"
           >
@@ -114,7 +114,7 @@ export default function HeroSection() {
 
           {/* Android */}
           <a
-            href="#platforms"
+            href="https://github.com/Omarrawas/doraty-app/releases/latest/download/app-release.apk"
             id="hero-android-btn"
             className="group flex items-center gap-3 px-5 py-3 rounded-xl glass border border-white/10 hover:border-green-500/40 hover:bg-green-500/5 transition-all duration-300 hover:scale-105 active:scale-95"
           >

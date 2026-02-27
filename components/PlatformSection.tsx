@@ -116,15 +116,22 @@ export default function PlatformSection() {
                       {card.cta}
                       <ExternalLink className="w-4 h-4 rtl:rotate-180" />
                     </a>
-                  ) : (
-                    <button
-                      className="btn-secondary w-full justify-center text-sm py-3 cursor-not-allowed opacity-70"
-                      title="Coming soon"
-                      disabled
+                  ) : index === 1 ? (
+                    <a
+                      href="https://github.com/Omarrawas/doraty-app/releases/latest/download/app-release.apk"
+                      className="btn-primary w-full justify-center text-sm py-3"
                     >
                       <Download className="w-4 h-4" />
                       {card.cta}
-                    </button>
+                    </a>
+                  ) : (
+                        <a
+                          href="https://github.com/Omarrawas/doraty-app/releases/latest/download/Doraty-Windows.zip"
+                          className="btn-primary w-full justify-center text-sm py-3"
+                    >
+                      <Download className="w-4 h-4" />
+                      {card.cta}
+                        </a>
                   )}
                 </div>
               </div>
