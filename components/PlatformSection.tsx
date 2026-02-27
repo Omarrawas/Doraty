@@ -26,7 +26,7 @@ const hoverBorders = [
 ];
 
 export default function PlatformSection() {
-  const { t, dir } = useLanguage();
+  const { t, dir, locale } = useLanguage();
 
   return (
     <section id="platforms" className="py-24 relative overflow-hidden">
