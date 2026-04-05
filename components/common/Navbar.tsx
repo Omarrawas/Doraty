@@ -81,10 +81,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Buttons */}
+        {/* Buttons & Actions */}
+        <div className="flex items-center gap-2 sm:gap-4">
           {/* Notifications Icon (Authenticated) */}
           {user && (
-            <Link href="/notifications" className="relative w-11 h-11 glass rounded-xl flex items-center justify-center text-white hover:bg-white/10 transition-all border-white/5 mx-1">
+            <Link href="/notifications" className="relative w-10 h-10 sm:w-11 sm:h-11 glass rounded-xl flex items-center justify-center text-white hover:bg-white/10 transition-all border-white/5 mx-0.5">
                 <Bell size={20} />
                 <AnimatePresence>
                 {unreadCount > 0 && (
@@ -102,7 +103,7 @@ export default function Navbar() {
           )}
 
           {/* Cart Icon */}
-          <Link href="/cart" className="relative w-11 h-11 glass rounded-xl flex items-center justify-center text-white hover:bg-white/10 transition-all border-white/5">
+          <Link href="/cart" className="relative w-10 h-10 sm:w-11 sm:h-11 glass rounded-xl flex items-center justify-center text-white hover:bg-white/10 transition-all border-white/5">
             <ShoppingCart size={20} />
             <AnimatePresence>
               {cart.length > 0 && (
@@ -126,13 +127,14 @@ export default function Navbar() {
               </Link>
               
               <Link href="/profile" className="flex items-center gap-3 glass pl-6 pr-2 py-2 rounded-full hover:bg-white/10 transition-all group">
-              <div className="w-8 h-8 rounded-full premium-gradient p-[1px]">
-                  <div className="w-full h-full rounded-full bg-[#0f172a] flex items-center justify-center overflow-hidden">
-                    <User className="text-slate-300" size={16} />
-                  </div>
-              </div>
-              <span className="text-sm font-bold text-slate-200 hidden md:block">حسابي</span>
-            </Link>
+                <div className="w-8 h-8 rounded-full premium-gradient p-[1px]">
+                    <div className="w-full h-full rounded-full bg-[#0f172a] flex items-center justify-center overflow-hidden">
+                      <User className="text-slate-300" size={16} />
+                    </div>
+                </div>
+                <span className="text-sm font-bold text-slate-200 hidden md:block">حسابي</span>
+              </Link>
+            </div>
           ) : (
             <Link href="/auth/login" className="flex items-center gap-2 glass px-6 py-2.5 rounded-xl text-white font-bold hover:bg-white/10 transition-all border-white/10">
               <LogIn size={18} />
@@ -143,7 +145,7 @@ export default function Navbar() {
           {/* Mobile Menu Trigger */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden w-11 h-11 glass rounded-xl flex items-center justify-center text-white"
+            className="lg:hidden w-10 h-10 sm:w-11 sm:h-11 glass rounded-xl flex items-center justify-center text-white"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
